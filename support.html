@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Purge Support</title>
+<style>
+  :root {
+    --bg: #070A08; --card: #0F1511; --elevated: #16201A;
+    --ink: #FFFFFF; --ink-soft: #9BA8A0; --ink-faint: #6B7A72;
+    --mint: #4ADE80; --mint-deep: #22C55E; --line: rgba(255,255,255,0.08);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: linear-gradient(180deg, #0B100D 0%, #050705 100%);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.65; padding: 48px 20px 80px;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  .brand { display: flex; align-items: center; gap: 12px; margin-bottom: 40px; }
+  .dot {
+    width: 34px; height: 34px; border-radius: 10px;
+    background: linear-gradient(180deg, #86EFAC, #22C55E);
+    display: flex; align-items: center; justify-content: center;
+    color: #07220F; font-weight: 800; font-size: 19px;
+  }
+  .brand-name { font-weight: 700; letter-spacing: 0.02em; }
+  .tagline { color: var(--ink-faint); font-size: 14px; }
+  h1 { font-size: 32px; font-weight: 800; margin-bottom: 8px; letter-spacing: -0.02em; }
+  h2 { font-size: 19px; font-weight: 700; margin: 36px 0 12px; padding-top: 20px; border-top: 1px solid var(--line); }
+  h3 { font-size: 16px; font-weight: 700; color: var(--ink); margin: 18px 0 6px; }
+  p, li { color: var(--ink-soft); font-size: 16px; }
+  ul { padding-left: 22px; margin: 10px 0; }
+  li { margin-bottom: 8px; }
+  strong { color: var(--ink); font-weight: 600; }
+  .accent { color: var(--mint); font-weight: 600; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 24px; margin: 20px 0; }
+  .meta { color: var(--ink-faint); font-size: 13px; margin-bottom: 28px; }
+  a { color: var(--mint); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  footer { margin-top: 56px; color: var(--ink-faint); font-size: 13px; border-top: 1px solid var(--line); padding-top: 20px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="brand">
+    <div class="dot">P</div>
+    <div>
+      <div class="brand-name">Purge</div>
+      <div class="tagline">Storage cleaner for iPhone</div>
+    </div>
+  </div>
+
+  <h1>Support</h1>
+  <p class="meta">We read and answer every report: <a href="https://github.com/afoofaa/purge/issues">github.com/afoofaa/purge/issues</a></p>
+
+  <div class="card">
+    <p><span class="accent">Purge runs entirely on your device.</span> Your photos are never uploaded. Scanning, duplicate matching, and blur detection all happen locally, and deletions always require your confirmation in the iOS dialog.</p>
+  </div>
+
+  <h2>Frequently asked questions</h2>
+
+  <h3>How do I run my first scan?</h3>
+  <p>Open Purge and tap Scan. Grant photo access when iOS asks. Purge measures every photo on-device, then groups findings into Duplicates, Screenshots, and Blurry shots with the space each group can reclaim.</p>
+
+  <h3>Why does iOS ask me to confirm every deletion?</h3>
+  <p>By design. Purge never deletes anything silently. Each cleanup sends the selected items to the system confirmation dialog, and the deletion only happens after you confirm it there. Deleted photos remain in the Recently Deleted album for about 30 days, so you can always undo from the Photos app.</p>
+
+  <h3>What counts as a duplicate?</h3>
+  <p>Purge compares visual fingerprints of your photos on-device. Shots that are near-identical (burst frames, re-shares, repeated screenshots) cluster together. The first item is marked as the kept original; the rest are suggestions. You always pick what actually goes.</p>
+
+  <h3>How does blurry detection work?</h3>
+  <p>Purge measures how much fine detail each photo carries and compares it against your library's own baseline. Only clearly soft shots are suggested, and busy but sharp subjects like grass, fabric, or dense text stay out of the list.</p>
+
+  <h3>What is free, and what is Pro?</h3>
+  <p>Your first 10 deletions are free, for the lifetime of the app. After that, Pro unlocks unlimited cleanup. Pro comes as a monthly or yearly subscription, or as a one-time lifetime purchase. Purchases are handled by Apple and can be restored anytime from Settings using the same Apple ID.</p>
+
+  <h3>I bought Pro but it shows as locked.</h3>
+  <p>Open Settings inside Purge and tap Restore Purchases. Make sure you are signed in with the Apple ID used for the original purchase. If that does not fix it, email us and include your purchase receipt from Apple.</p>
+
+  <h3>How do I cancel a subscription?</h3>
+  <p>Subscriptions are managed by Apple. On your device, open Settings, tap your name, then Subscriptions, choose Purge, and cancel there. Access continues until the end of the current billing period.</p>
+
+  <h3>A scan finds nothing. Is that normal?</h3>
+  <p>It happens. If your library has no near-duplicates and no clearly soft shots, Purge will tell you there is nothing to clean rather than inventing suggestions.</p>
+
+  <h2>Still stuck?</h2>
+  <p>Open an issue at <a href="https://github.com/afoofaa/purge/issues">github.com/afoofaa/purge/issues</a> with your device model and iOS version, and what you expected versus what happened. Every report is read by a human.</p>
+
+  <footer>Purge. On-device storage cleaning. Your photos stay yours.</footer>
+</div>
+</body>
+</html>
